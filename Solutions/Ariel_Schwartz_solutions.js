@@ -9,3 +9,6 @@ const subb = (a, b) => a - b;
 
 // 4) Write a binary function mulb that takes two numbers and returns their product
 const mulb = (a, b) => a * b;
+
+// 5) Write a binary function minb that takes two numbers and returns the smaller one
+const minb = (a, b) => Math.min(a, b);
