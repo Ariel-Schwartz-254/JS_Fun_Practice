@@ -43,90 +43,28 @@ const mul = (...nums) => {
     return product;
 }
 
-// 9) Write a function min that is generalized for any amount of arguments
+// 10) Write a function min that is generalized for any amount of arguments
 const min = (...nums) => Math.min(...nums);
 
-// 10) Write a function max that is generalized for any amount of arguments
+// 11) Write a function max that is generalized for any amount of arguments
 const max = (...nums) => Math.max(...nums);
 
-module.exports = {
-    identity,
-    addb,
-    subb,
-    mulb,
-    minb,
-    maxb,
-    add,
-    sub,
-    mul,
-    min,
-    max,
-    // addRecurse,
-    // mulRecurse,
-    // minRecurse,
-    // maxRecurse,
-    // not,
-    // acc,
-    // accPartial,
-    // accRecurse,
-    // fill,
-    // fillRecurse,
-    // set,
-    // identityf,
-    // addf,
-    // liftf,
-    // pure,
-    // curryb,
-    // curry,
-    // inc,
-    // twiceUnary,
-    // doubl,
-    // square,
-    // twice,
-    // reverseb,
-    // reverse,
-    // composeuTwo,
-    // composeu,
-    // composeb,
-    // composeTwo,
-    // compose,
-    // limitb,
-    // limit,
-    // genFrom,
-    // genTo,
-    // genFromTo,
-    // elementGen,
-    // element,
-    // collect,
-    // filter,
-    // filterTail,
-    // concatTwo,
-    // concat,
-    // concatTail,
-    // gensymf,
-    // gensymff,
-    // fibonaccif,
-    // counter,
-    // revocableb,
-    // revocable,
-    // extract,
-    // m,
-    // addmTwo,
-    // addm,
-    // liftmbM,
-    // liftmb,
-    // liftm,
-    // exp,
-    // expn,
-    // addg,
-    // liftg,
-    // arrayg,
-    // continuizeu,
-    // continuize,
-    // vector,
-    // exploitVector,
-    // vectorSafe,
-    // pubsub,
-    // mapRecurse,
-    // filterRecurse,
-};
+//  12) Write a function addRecurse that is the generalized add function but uses recursion
+const addRecurse = (...nums) => {
+    return nums.length <= 1 ? nums[0] : nums[0] + addRecurse(...nums.slice(1));
+}
+
+//  13) Write a function mulRecurse that is the generalized mul function but uses recursion
+const mulRecurse = (...nums) => {
+    return nums.length <= 1 ? nums[0] : nums[0] * mulRecurse(...nums.slice(1));
+}
+
+//  14) Write a function minRecurse that is the generalized min function but uses recursion
+const minRecurse = (...nums) => {
+    return nums.length <= 1 ? nums[0] : Math.min(nums[0], minRecurse(...nums.slice(1)));
+}
+
+//  15) Write a function maxRecurse that is the generalized max function but uses recursion
+const maxRecurse = (...nums) => {
+    return nums.length <= 1 ? nums[0] : Math.max(nums[0], maxRecurse(...nums.slice(1)));
+}
